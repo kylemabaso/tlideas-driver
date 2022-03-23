@@ -23,12 +23,17 @@ const App = () => {
 
 return (
   <div className="App">
-    <button onClick={getLocation}>Collect Waste</button>
-
-    <h1>Coordinates</h1>
-          <p>{status}</p>
-    {lat && <p>Latitude: {lat}</p>}
-    {lng && <p>Longitude: {lng}</p>}
+    <div class="card w-96 bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Driver App</h2>
+        <p>{status}</p>
+          {lat && <p>Latitude: {lat}</p>}
+          {lng && <p>Longitude: {lng}</p>}
+        <div class="card-actions justify-end">
+          <button onClick={getLocation} class="btn btn-primary">Waste Collected</button>
+        </div>
+      </div>
+    </div>
   </div>
 );
 }
